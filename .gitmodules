@@ -1,0 +1,6 @@
+[submodule "kinetics-dataset"]
+	path = kinetics-dataset
+	url = https://github.com/nastarandarjani/kinetics-dataset
+[submodule "snail-ssl"]
+	path = snail-ssl
+	url = https://github.com/nastarandarjani/snail-ssl
