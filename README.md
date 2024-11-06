@@ -9,7 +9,9 @@
    Create an `annotations` directory and place the following files for each split:
    - `.txt` files containing video links.
    - Annotation links.
-   - Prepared `.csv` files, following the [PyTorchVideo recommendations](https://github.com/facebookresearch/pytorchvideo/docs/source/data_preparation.md#kinetics). You can generate these using the [`create_csv.sh`](/kinetics-dataset/create_csv.sh) script.
+   - Prepared `.csv` files, following the [PyTorchVideo recommendations](https://github.com/facebookresearch/pytorchvideo/docs/source/data_preparation.md#kinetics). You can generate these using the [`create_csv.sh`](/kinetics-dataset/create_csv.sh) script and then [`revise_csv.py`](/kinetics-dataset/annotations/revise_csv.py) code.
+   
+   
 
 3. **Downscale Videos**  
    Resize videos to a short edge size of 256 pixels, as recommended by [PyTorchVideo](https://github.com/facebookresearch/pytorchvideo/docs/source/data_preparation.md#kinetics). I implemented a job script [`downsample.sh`](/kinetics-dataset/downsample.sh) to execute the Python script [`downscale_video.sh`](/kinetics-dataset/downscale_video.sh).
