@@ -12,7 +12,7 @@
    - Prepared `.csv` files, following the [PyTorchVideo recommendations](https://github.com/facebookresearch/pytorchvideo/docs/source/data_preparation.md#kinetics). You can generate these using the [`create_csv.sh`](/kinetics-dataset/create_csv.sh) script.
 
 3. **Downscale Videos**  
-   Resize videos to a short edge size of 256 pixels, as recommended by [PyTorchVideo](https://github.com/facebookresearch/pytorchvideo/docs/source/data_preparation.md#kinetics). I implemented a job script [`downsample.sh`](/kinetics-dataset/downsample.sh) to execute the Python script [`downscale_video.py`](/kinetics-dataset/downscale_video.py). This script is a revised version of [downscale_video_joblib.py](https://github.com/facebookresearch/video-nonlocal-net/blob/main/process_data/kinetics/downscale_video_joblib.py).
+   Resize videos to a short edge size of 256 pixels, as recommended by [PyTorchVideo](https://github.com/facebookresearch/pytorchvideo/docs/source/data_preparation.md#kinetics). I implemented a job script [`downsample.sh`](/kinetics-dataset/downsample.sh) to execute the Python script [`downscale_video.sh`](/kinetics-dataset/downscale_video.sh).
 
    **Note:** Update the following variables in `downscale_video.py` according to your needs:
    ```python
