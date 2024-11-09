@@ -14,13 +14,13 @@
    
 
 3. **Downscale Videos**  
-   Resize videos to a short edge size of 256 pixels, as recommended by [PyTorchVideo](https://github.com/facebookresearch/pytorchvideo/docs/source/data_preparation.md#kinetics). I implemented a job script [`downsample.sh`](/kinetics-dataset/downsample.sh) to execute the Python script [`downscale_video.sh`](/kinetics-dataset/downscale_video.sh).
+   Resize videos to a short edge size of 256 pixels, as recommended by [PyTorchVideo](https://github.com/facebookresearch/pytorchvideo/docs/source/data_preparation.md#kinetics). Run [`downscale_video.sh`](/kinetics-dataset/downscale_video.sh) script to downscale videos.
 
-   **Note:** Update the following variables in `downscale_video.py` according to your needs:
-   ```python
-   14 file_src = "annotations/val_output.csv"
-   15 folder_path = "val/"
-   16 output_path = "val_256/"
+   **Note:** Update the following variables in `downscale_video.sh` according to your needs:
+   ```bash
+   1 SRC_DIR="/home/nasi14/scratch/k400/downsampled/train"
+   ...
+   9 output="$SRC_DIR/train/$filename"
    ```
 
 4. **Backup and Organize Files**
@@ -33,6 +33,7 @@
    ```
    k400
    ├── downsampled
+   │   ├── train
    │   ├── test.tar
    │   ├── train.tar
    │   └── val.tar
